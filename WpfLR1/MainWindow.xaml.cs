@@ -24,5 +24,38 @@ namespace WpfLR1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Point p = e.GetPosition(this);
+            Canvas.SetLeft(button1, p.X - button1.ActualWidth / 2);
+            Canvas.SetTop(button1, p.Y - button1.ActualHeight / 2);
+        }
+
+        private void button2_MouseMove(object sender, MouseEventArgs e)
+        {
+
+            Random r = new Random();
+            if (Keyboard.IsKeyDown(Key.LeftCtrl)
+                || Keyboard.IsKeyDown(Key.RightCtrl))
+                return;
+            Point p = e.GetPosition(this);
+            Canvas.SetLeft(button2, r.NextDouble() *
+                ((Content as Canvas).ActualWidth-5));
+            Canvas.SetTop(button2, r.NextDouble() *
+                ((Content as Canvas).ActualHeight - 5));
+
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            button2.Content = "Изменить";
+            button2.MouseMove -= button2_MouseMove;
+        }
     }
 }

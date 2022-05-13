@@ -1,0 +1,16 @@
+C:\SDV\WPFLR1\WpfLR1\bin\Debug\WpfLR1.exe.config
+C:\SDV\WPFLR1\WpfLR1\bin\Debug\WpfLR1.exe
+C:\SDV\WPFLR1\WpfLR1\bin\Debug\WpfLR1.pdb
+C:\SDV\WPFLR1\WpfLR1\obj\Debug\WpfLR1.csproj.AssemblyReference.cache
+C:\SDV\WPFLR1\WpfLR1\obj\Debug\WpfLR1.csproj.SuggestedBindingRedirects.cache
+C:\SDV\WPFLR1\WpfLR1\obj\Debug\MainWindow.g.cs
+C:\SDV\WPFLR1\WpfLR1\obj\Debug\App.g.cs
+C:\SDV\WPFLR1\WpfLR1\obj\Debug\WpfLR1_MarkupCompile.cache
+C:\SDV\WPFLR1\WpfLR1\obj\Debug\WpfLR1_MarkupCompile.lref
+C:\SDV\WPFLR1\WpfLR1\obj\Debug\MainWindow.baml
+C:\SDV\WPFLR1\WpfLR1\obj\Debug\WpfLR1.g.resources
+C:\SDV\WPFLR1\WpfLR1\obj\Debug\WpfLR1.Properties.Resources.resources
+C:\SDV\WPFLR1\WpfLR1\obj\Debug\WpfLR1.csproj.GenerateResource.cache
+C:\SDV\WPFLR1\WpfLR1\obj\Debug\WpfLR1.csproj.CoreCompileInputs.cache
+C:\SDV\WPFLR1\WpfLR1\obj\Debug\WpfLR1.exe
+C:\SDV\WPFLR1\WpfLR1\obj\Debug\WpfLR1.pdb
