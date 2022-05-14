@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfLR1"
         mc:Ignorable="d"
-        Title="Прыгающие кнопки" Height="450" Width="800">
+        Title="Прыгающие кнопки" Height="450" Width="800"
+        SizeChanged="Window_SizeChanged"
+        >
     <Canvas MouseDown="Canvas_MouseDown" Background="White">
         <Button x:Name="button1" Content="Закрыть" Canvas.Left="10"
                 Canvas.Top="10" Width="75" Click="button1_Click" />

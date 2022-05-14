@@ -22,7 +22,7 @@ namespace WpfLR1
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent ();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -35,6 +35,10 @@ namespace WpfLR1
             Point p = e.GetPosition(this);
             Canvas.SetLeft(button1, p.X - button1.ActualWidth / 2);
             Canvas.SetTop(button1, p.Y - button1.ActualHeight / 2);
+            button2.Content = "";
+            button2.MouseMove += button2_MouseMove;
+            button2.Click += button2_Click;
+            button2.Click -= button2_Click2;
         }
 
         private void button2_MouseMove(object sender, MouseEventArgs e)
@@ -42,7 +46,8 @@ namespace WpfLR1
 
             Random r = new Random();
             if (Keyboard.IsKeyDown(Key.LeftCtrl)
-                || Keyboard.IsKeyDown(Key.RightCtrl))
+                || Keyboard.IsKeyDown(Key.RightCtrl)
+                || Keyboard.IsKeyDown(Key.Space))
                 return;
             Point p = e.GetPosition(this);
             Canvas.SetLeft(button2, r.NextDouble() *
@@ -54,8 +59,29 @@ namespace WpfLR1
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            button2.Content = "Изменить";
             button2.MouseMove -= button2_MouseMove;
+            button2.Click -= button2_Click2;
+        }
+        private void button2_Click2(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState == WindowState.Normal ?
+                WindowState.Maximized : WindowState.Normal;
+        }
+
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            var c = Content as Canvas;
+            for (int i = 0; i < 2; i++)
+            {
+                var b = FindName("button" + (i+1)) as Button;
+                if (Canvas.GetLeft(b)>c.ActualWidth ||
+                    Canvas.GetTop(b) > c.ActualHeight)
+                {
+                    Canvas.SetLeft(b, 10 + i * (b.ActualWidth + 10));
+                    Canvas.SetTop(b, 10);
+
+                }
+            }
         }
     }
 }
